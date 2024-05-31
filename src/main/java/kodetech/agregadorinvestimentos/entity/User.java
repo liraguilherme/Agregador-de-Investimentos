@@ -5,6 +5,10 @@ import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.Instant;
+<<<<<<< HEAD
+=======
+import java.util.List;
+>>>>>>> aa898f8 (#2 Add Entities Relationships)
 import java.util.UUID;
 
 @Entity
@@ -31,6 +35,13 @@ public class User {
     @UpdateTimestamp
     private Instant updateTimestamp;
 
+<<<<<<< HEAD
+=======
+    //One=User para Many= Muitas Contas
+    @OneToMany(mappedBy = "user")  //Indicamos que a entidade foi mapeado do outro lado da entity
+    private List<Account> accounts;
+
+>>>>>>> aa898f8 (#2 Add Entities Relationships)
     public User() {
     }
 
@@ -90,4 +101,15 @@ public class User {
     public void setUpdateTimestamp(Instant updateTimestamp) {
         this.updateTimestamp = updateTimestamp;
     }
+<<<<<<< HEAD
+=======
+
+    public List<Account> getAccounts() {
+        return accounts;
+    }
+
+    public void setAccounts(List<Account> accounts) {
+        this.accounts = accounts;
+    }
+>>>>>>> aa898f8 (#2 Add Entities Relationships)
 }
