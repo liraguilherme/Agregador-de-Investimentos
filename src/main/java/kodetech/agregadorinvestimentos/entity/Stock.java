@@ -37,6 +37,6 @@ public class Stock {
     }
 
     public void setDescription(String description) {
-        this.description = description; //o
+        this.description = description; 
     }
 }
